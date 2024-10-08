@@ -50,11 +50,14 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
 
     //roomdb
 
+
     implementation (libs.androidx.room.runtime)
-    annotationProcessor (libs.androidx.room.compiler)
+    kapt(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
     implementation( libs.androidx.room.rxjava2)
     implementation( libs.androidx.room.rxjava3)
     implementation (libs.androidx.room.guava)

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="Note1">#FF000000</color>
-    <color name="Note2">#FFFFFFFF</color>
+
+    <color name="white">#F6EFEF</color>
+    <color name="Black">#FF000000</color>
+    <color name="Note1">#503D3D</color>
+    <color name="Note2">#B3B1B1</color>
     <color name="Note3">#FF6200EE</color>
     <color name="Note4">#FFBB86FC</color>
     <color name="Note5">#FF03DAC5</color>

@@ -76,7 +76,7 @@ class NotesAdapter(context: Context, val listener: NotesClickListener) :
         notifyDataSetChanged()
     }
 
-    fun randomColor(): Int {
+    private fun randomColor(): Int {
         val list = ArrayList<Int>()
         list.add(R.color.Note1)
         list.add(R.color.Note2)
@@ -94,13 +94,15 @@ class NotesAdapter(context: Context, val listener: NotesClickListener) :
 
     inner class NotesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val notes_layout = itemView.findViewById<CardView>(R.id.card_Layout)
-        val title = itemView.findViewById<CardView>(R.id.title)
-        val note_tv = itemView.findViewById<CardView>(R.id.note)
-        val date = itemView.findViewById<CardView>(R.id.date)
+        val title = itemView.findViewById<TextView>(R.id.title)
+        val note_tv = itemView.findViewById<TextView>(R.id.note)
+        val date = itemView.findViewById<TextView>(R.id.date)
     }
 
     interface NotesClickListener {
         fun onItemClicked(note: Note)
         fun onLongItemClicked(note: Note, cardView: CardView)
+        abstract fun popUpDisplay(cardView: CardView)
     }
 }
+
